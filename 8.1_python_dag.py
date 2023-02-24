@@ -26,6 +26,7 @@ with DAG(
             catchup=False,
             start_date=datetime(2023,2,23),
             schedule=None,
+            default_args={"owner":"Tinmar"},
             tags=['Curso 4', 'The Operators Guide']
         ) as dag:
     
