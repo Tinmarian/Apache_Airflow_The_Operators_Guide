@@ -6,13 +6,18 @@ nuestros DAG's.
 
 Este operador nos va a ayudar a revisar datos dentro de una 
 base de datos y decidir qué tarea ejecutar con base en los datos
-obtenidos en la revisión
+obtenidos en la revisión.
+
+Este Operador regresa un False o un True, y para decidir qué tarea
+implementar dependiendo del resultado, tenemos los parámetros:
+
+    * follow_task_ids_if_true = ''
+    * follow_task_ids_if_false = ''
 """
 
 
 from airflow import DAG
 from datetime import datetime
-import yaml
 
 from airflow.operators.dummy import DummyOperator 
 from airflow.providers.postgres.operators.postgres import PostgresOperator
